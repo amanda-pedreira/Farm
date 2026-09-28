@@ -15,7 +15,6 @@ public class Batata {
     public void crescer() {
         this.tempoDeVida++;
         
-        
         if(this.tempoDeVida % this.tempoDeCrescimento == 0 && tamanho < 4){
             this.tamanho++;
         }
