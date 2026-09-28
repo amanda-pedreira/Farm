@@ -32,7 +32,7 @@ public class Cenoura {
     }
 
     public String getImagem() {
-        return "images/batata" + tamanho + ".png";
+        return "images/cenoura" + tamanho + ".png";
     }
  
 
