@@ -64,13 +64,15 @@ public class Celeiro {
     
     public int getOcupacao() {
         int total = qtdeBatatas + qtdeCenouras + qtdeMorangos;
-        double percentual = (total / capacidade) * 100;
+        // int percentual = (total / capacidade) * 100;
+        int percentual = (total * 100) / capacidade;
         return percentual;
     }
 
     public boolean celeiroCheio() {
         int total = qtdeBatatas + qtdeCenouras + qtdeMorangos;
-        if (capacidade - total == 0){
+        // o -2 é porque geramos 2 unidades, então se tiver menos de 2 de espaço, não pode colher. O "== 0" poderia dar erro 
+        if (capacidade - total < 2){
             return true;
         }
         return false;   
