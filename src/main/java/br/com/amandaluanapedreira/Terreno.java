@@ -27,24 +27,23 @@ public class Terreno {
         
     }
 
-    // mas nem escrevi a variavel de Celeiro celeiro la em cima
     public void colher(Celeiro celeiro) {
-        if (){
+        if (batata != null &&batata.podeColher()){
             celeiro.armazenarBatata();
             this.batata = null;
 
-        }else if(cenoura != null){
+        }else if(cenoura != null && cenoura.podeColher()){
             celeiro.armazenarCenoura();
             this.cenoura = null;
 
-        }else if(morango != null){
+        }else if(morango != null && morango.podeColher()){
             celeiro.armazenarMorango();
             this.morango = null;
         }
     }
 
     public boolean estaOcupado() {
-        if (batata != null || cenoura != null || morango != null){
+        if(batata != null || cenoura != null || morango != null){
             return true;
         }
         return false;
